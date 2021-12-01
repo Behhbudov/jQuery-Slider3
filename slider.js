@@ -10,7 +10,7 @@ $(() => {
             height: "60vh",
             margin: "10vh auto",
             boxShadow: "0 0 10px #000",
-            background: `url('../../jQuery/img/${arr[src]}') center/cover`,
+            background: `url('img/${arr[src]}') center/cover`,
             overflow: "hidden"
         })
         .append('<div id="geden"></div>')
@@ -39,7 +39,7 @@ $(() => {
             bottom: 0,
             textAlign: 'center',
         })
-        arr.forEach( image => thumb.append(`<img src="../../jQuery/img/${image}" />`) )
+        arr.forEach( image => thumb.append(`<img src="img/${image}" />`) )
         let thumbImg = $('#thumb > img')
         thumbImg
             .css({
@@ -100,7 +100,7 @@ $(() => {
             gelen
                 .css({
                     left: direction * slider.width(), 
-                    backgroundImage: `url('../../jQuery/img/${arr[src]}')`
+                    backgroundImage: `url('img/${arr[src]}')`
                 })
                 .animate({
                     left: 0
@@ -109,7 +109,7 @@ $(() => {
                 .stop(true, true)
                 .css({ width: 0 })
                 .animate({ width: '100%' }, 3000)
-            slider.css({ backgroundImage: `url('../../jQuery/img/${arr[src]}')` })
+            slider.css({ backgroundImage: `url('img/${arr[src]}')` })
             show.text(`${src + 1} / 9`)
             thumbImg.css("opacity", .5)
             thumbImg.eq(src).css("opacity", 1)
